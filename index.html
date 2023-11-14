@@ -8,9 +8,14 @@
     <title>Statliga televisionskanalen</title>
 </head>
 
-<body>
+<body onload="loadSearchData()">
     <header>
-        <nav id="searchbar">searchbar</nav>
+        <div class="container"> <input id="searchbar" onkeyup="search()" type="text" \n name="search"
+                placeholder="Vilken titel söker du efter?">
+        </div>
+
+        <div id="list"></div>
+
     </header>
     <main>
         <label for="title">Titel</label>
@@ -19,8 +24,8 @@
         <input type="number" class="forms" id="agerestriction" placeholder="0"></input>
         <label for="description">Beskrivning</label>
         <textarea type="text" class="forms" id="description" placeholder="Beskrivning"></textarea>
-        <button id="sendbutton">Sänd</button>
-
+        <button class="buttons" id="savebutton" onclick="saveData()">Spara</button>
+        <button class="buttons" id="showbutton" onclick="showData()">Visa</button>
     </main>
     <footer></footer>
     <script src="scripts/script.js"></script>
