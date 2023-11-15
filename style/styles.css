@@ -2,37 +2,77 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-body main * {
-  font-family: "Arial", sans-serif;
+body header {
+  display: flex;
+  justify-content: center;
 }
-body main .container {
-  padding: 100px 25%;
+body header img {
+  width: 35%;
+  max-width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+body footer {
+  display: flex;
+  justify-content: center;
+}
+body footer .text {
+  padding: 10px;
+}
+body footer #time {
+  align-self: center;
+}
+body main {
+  padding-left: 4%;
+  padding-right: 4%;
+  align-items: center;
   display: flex;
   flex-direction: column;
   line-height: 2rem;
   font-size: 1.2em;
-  color: #202c39;
+  width: 600px;
+  max-width: 100%;
 }
-body main .container #searchbar {
-  padding: 15px;
+body main .forms {
+  margin-bottom: 1em;
+  width: 600px;
+  max-width: 100%;
+}
+body main #description {
+  height: 10em;
+}
+body main #searchbar {
+  padding: 10px;
   border-radius: 5px;
+  width: 600px;
+  max-width: 100%;
 }
-body main .container input[type=text] {
-  transition: width 0.15s ease-in-out;
-}
-body main .container #list {
+body main #list {
   border: 1px solid lightgrey;
   border-radius: 5px;
-  display: block;
+  display: none;
+  width: 600px;
+  max-width: 100%;
 }
-body main .container .listItem {
+body main #showbutton {
+  margin-top: 1em;
+}
+body main .listItem {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   padding: 5px 20px;
-  color: black;
+  background-color: white;
 }
-body main .container .listItem:hover {
+body main .listItem:hover {
   background-color: lightgrey;
+}
+body main .buttons {
+  margin-bottom: 1em;
+  width: 100px;
+  max-width: 100%;
 }/*# sourceMappingURL=styles.css.map */

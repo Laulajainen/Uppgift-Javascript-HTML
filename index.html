@@ -1,32 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/styles.css">
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/styles.css" />
     <title>Statliga televisionskanalen</title>
-</head>
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon" />
+  </head>
 
-<body onload="loadSearchData()">
+  <body onload="loadSearchData()">
     <header>
+      <img src="media/stk.png" alt="Logo" />
     </header>
-    <main class="container">
-        <input id="searchbar" autocomplete="off" onkeyup="search()" type="text" \n name="search"
-        placeholder="Vilken titel söker du efter?">
-        <div id="list"></div>
-        <label for="title">Titel</label>
-        <input type="text" class="forms" id="title" placeholder="titel"></input>
-        <label for="agerestriction">Åldesgräns</label>
-        <input type="number" class="forms" id="agerestriction" placeholder="0"></input>
-        <label for="description">Beskrivning</label>
-        <textarea type="text" class="forms" id="description" placeholder="Beskrivning"></textarea>
-        <button class="buttons" id="savebutton" onclick="saveData()">Spara</button>
-        <button class="buttons" id="showbutton" onclick="showData()">Visa</button>
-        <button class="buttons" id="clearbutton" onclick="clearStorage()">Rensa Minnet</button>
-    </main>
-    <footer></footer>
-    <script src="scripts/script.js"></script>
-</body>
 
+    <main class="container">
+      <input
+        id="searchbar"
+        autocomplete="off"
+        onkeyup="search()"
+        type="text"
+        name="search"
+        placeholder="Sök titel" />
+
+      <div id="list"></div>
+
+      <button class="buttons" id="showbutton" onclick="showData()">Sök</button>
+
+      <label for="title">Titel</label>
+
+      <input type="text" class="forms" id="title" placeholder="titel" />
+
+      <label for="agerestriction">Åldesgräns</label>
+
+      <input type="number" class="forms" id="agerestriction" placeholder="0" />
+
+      <label for="description">Beskrivning</label>
+
+      <textarea class="forms" id="description" placeholder="Beskrivning"> </textarea>
+
+      <button class="buttons" id="savebutton" onclick="saveData()">Spara</button>
+
+      <button class="buttons" id="unlockbutton" onclick="unlockForms()">Återställ formulär</button>
+
+      <button class="buttons" id="clearbutton" onclick="clearStorage()">Rensa Databas</button>
+    </main>
+
+    <footer>
+      <h5 class="text">© Statliga televisionskanalen</h5>
+      <h5 class="text">Senast uppdaterad</h5>
+      <span id="time"></span>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+  </body>
 </html>
