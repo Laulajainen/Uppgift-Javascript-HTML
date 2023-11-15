@@ -10,14 +10,11 @@
 
 <body onload="loadSearchData()">
     <header>
-        <div class="container"> <input id="searchbar" onkeyup="search()" type="text" \n name="search"
-                placeholder="Vilken titel söker du efter?">
-        </div>
-
-        <div id="list"></div>
-
     </header>
-    <main>
+    <main class="container">
+        <input id="searchbar" autocomplete="off" onkeyup="search()" type="text" \n name="search"
+        placeholder="Vilken titel söker du efter?">
+        <div id="list"></div>
         <label for="title">Titel</label>
         <input type="text" class="forms" id="title" placeholder="titel"></input>
         <label for="agerestriction">Åldesgräns</label>
@@ -26,6 +23,7 @@
         <textarea type="text" class="forms" id="description" placeholder="Beskrivning"></textarea>
         <button class="buttons" id="savebutton" onclick="saveData()">Spara</button>
         <button class="buttons" id="showbutton" onclick="showData()">Visa</button>
+        <button class="buttons" id="clearbutton" onclick="clearStorage()">Rensa Minnet</button>
     </main>
     <footer></footer>
     <script src="scripts/script.js"></script>

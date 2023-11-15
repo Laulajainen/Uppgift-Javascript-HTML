@@ -1,11 +1,38 @@
 body {
-  background-color: aliceblue;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
 }
-body main .forms {
-  background-color: aquamarine;
+body main * {
+  font-family: "Arial", sans-serif;
 }
-body main #description {
-  max-width: 100%;
-  max-height: 100%;
-  width: 800px;
+body main .container {
+  padding: 100px 25%;
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+  font-size: 1.2em;
+  color: #202c39;
+}
+body main .container #searchbar {
+  padding: 15px;
+  border-radius: 5px;
+}
+body main .container input[type=text] {
+  transition: width 0.15s ease-in-out;
+}
+body main .container #list {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  display: block;
+}
+body main .container .listItem {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 5px 20px;
+  color: black;
+}
+body main .container .listItem:hover {
+  background-color: lightgrey;
 }/*# sourceMappingURL=styles.css.map */

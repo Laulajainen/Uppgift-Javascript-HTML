@@ -22,6 +22,7 @@ function showData() {
   const savedData = localStorage.getItem("savedData");
   if (savedData) {
     const parsedData = JSON.parse(savedData);
+    console.log(b);
     if (parsedData.length > 0) {
       let a = document.getElementById("searchbar").value;
       let b = parsedData.findIndex((x) => x.title === a);
@@ -34,6 +35,10 @@ function showData() {
   } else {
     alert("Ingen data hittad");
   }
+}
+function clearStorage() {
+  localStorage.removeItem("savedData");
+  alert("Local storage cleared");
 }
 
 function loadSearchData() {
@@ -57,6 +62,7 @@ function search() {
   let input = document.getElementById("searchbar").value;
   input = input.toLowerCase();
   let noResults = true;
+
   for (i = 0; i < listItems.length; i++) {
     if (!listItems[i].innerHTML.toLowerCase().includes(input) || input === "") {
       listItems[i].style.display = "none";
